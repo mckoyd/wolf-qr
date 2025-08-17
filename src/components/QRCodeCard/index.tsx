@@ -2,18 +2,10 @@ import Image from "next/image";
 import { content } from "./config";
 import styles from "./styles.module.css";
 
-interface IQRCodeCard {
-  imgSrc: string;
-  imgAlt: string;
-  title: string;
-  description: string;
-}
-
 /**
  * QRCodeCard Component
  *
  * A card so simple, yet I'm using:
- * - TS interfaces
  * - CSS Modules
  * - Next.js Image Optimization
  * - Semantic HTML
