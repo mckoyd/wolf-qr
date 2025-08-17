@@ -17,13 +17,12 @@ import styles from "./styles.module.css";
 
 const QRCodeCard: React.FC = () => {
   return (
-    <article className={styles.card} aria-label="QR Code Card" role="region">
+    <section className={styles.card} aria-labelledby="qr-title" role="region">
       <div className={styles.imageWrapper}>
         <Image
           src={content.imageSrc}
           alt={content.imageAlt}
-          width={288}
-          height={288}
+          fill
           className={styles.image}
           priority
           quality={100}
@@ -31,10 +30,12 @@ const QRCodeCard: React.FC = () => {
       </div>
 
       <div className={styles.content}>
-        <h1 className={styles.title}>{content.title}</h1>
+        <h2 id="qr-title" className={styles.title}>
+          {content.title}
+        </h2>
         <p className={styles.description}>{content.description}</p>
       </div>
-    </article>
+    </section>
   );
 };
 
