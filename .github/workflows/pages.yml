@@ -17,6 +17,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      NEXT_PUBLIC_GH_REPO: ${{ vars.NEXT_PUBLIC_GH_REPO }}
     steps:
       - uses: actions/checkout@v4
 
